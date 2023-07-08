@@ -4,6 +4,7 @@ namespace skyss0fly\WordScrambler;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\player\Player;
+use cooldogepm\BedrockEconomy;
 class main extends PluginBase {
 
 public function onLoad(): void {
@@ -57,6 +58,20 @@ $this->getServer()->broadcastMessage(onChat::$player ."Unscrambled the word: " .
    if ($message === chatScramble::$word) {
      
    reaction();
+     economy();
 
+}
+}
+
+public function economy(BedrockEconomy $beconomy) {
+BedrockEconomyAPI::legacy()->addToPlayerBalance(
+    onChat::$player,
+    chatScramble::$economy,
+    ClosureContext::create(
+        function (bool $wasUpdated): void {
+            var_dump($wasUpdated);
+        },
+    )
+);
 }
 }
