@@ -48,8 +48,8 @@ while($delay === 0 && $timer != 0) {
   $this->getLogger()->warning("you cant participate you silly");
     return false;
   }
-$this->getServer()->broadcastMessage(onChat()->$player ."Unscrambled the word: " . chatScramble()->$wordraw . "and won " . chatScramble()->$economy)
-  chatScramble()::timer = 0
+$this->getServer()->broadcastMessage(onChat()->$player ."Unscrambled the word: " . chatScramble()->$wordraw . "and won " . chatScramble()->$economy);
+  chatScramble()->timer = 0
   timer();
 }
 }
