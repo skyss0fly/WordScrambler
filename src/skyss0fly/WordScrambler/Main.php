@@ -14,7 +14,7 @@ $config = $this->getConfig();
   $this->saveDefaultConfig();
 }
   public function onEnable(): void {
-timer();
+this->timer();
 $this->getLogger()->info("§0Plugin Enabled");
 }
 public function chatScramble(Player $player): void {
