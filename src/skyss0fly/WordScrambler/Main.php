@@ -31,7 +31,7 @@ foreach (range ($mlow, $mhigh) as $economy)
 $this->getServer()->broadcastMessage("New Word to Scramble: " .  $word . "winner gets " . $economy);
   }
   if ($timer === 0) {
-timer();
+$this->timer();
   }
   }
   public function timer() {
@@ -39,7 +39,7 @@ timer();
       return false;
   }
     if ($delay === 0) {
-chatScramble();
+$this->chatScramble();
     }
   }
 public function reaction(Player $player) {
@@ -49,7 +49,7 @@ while($delay === 0 && $timer != 0) {
     return false;
   }
 $this->getServer()->broadcastMessage(onChat()->$player ."Unscrambled the word: " . chatScramble()->$wordraw . "and won " . chatScramble()->$economy);
-  chatScramble()->timer = 0
+  $this->chatScramble($timer = 0);
   timer();
 }
 }
@@ -57,14 +57,14 @@ $this->getServer()->broadcastMessage(onChat()->$player ."Unscrambled the word: "
         $player = $event->getPlayer();
         $message = $event->getMessage();
    if ($message === chatScramble()->$word) {     
-   reaction();
-     economy();
+  $this->reaction();
+  $this->economy();
 }
 }
 public function economy(BedrockEconomy $beconomy) {
 BedrockEconomyAPI::legacy()->addToPlayerBalance(
-    onChat()->$player,
-    chatScramble()->$economy,
+    $this->onChat($player),
+    $this->chatScramble($economy),
     ClosureContext::create(
         function (bool $wasUpdated): void {
             var_dump($wasUpdated);
