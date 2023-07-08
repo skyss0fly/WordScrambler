@@ -21,7 +21,7 @@ public function chatScramble(Player $player): void {
 $mhigh =  $this->getConfig()->get("MoneyRangeHighest");
   $mlow =  $this->getConfig()->get("MoneyRangeLowest");
   $timer = $this->getConfig()->get("Timer"); 
-  // ^ time till end of scramble
+  // ^ time till end of scramble 
   $wordraw = $this->getConfig()->get("Words");
   $word = $wordraw->str_shuffle();
 foreach (range ($mlow, $mhigh) as $economy)
