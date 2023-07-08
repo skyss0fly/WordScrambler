@@ -29,17 +29,21 @@ foreach (range ($mlow, $mhigh) as $economy)
   // ^ time till next scramble
   while($timer > 0){
 $this->getServer()->broadcastMessage("New Word to Scramble: " .  $word . "winner gets " . $economy);
+    $this->getLogger()->info("§0new word to scramble");
   }
   if ($timer === 0) {
 $this->timer();
+    $this->getLogger()->info("§0times up");
   }
   }
   public function timer() {
       $delay = $this->getConfig()->get("Delay");
     while($delay > 0) {
+      $this->getLogger()->info("§0there is still delay time left");
       return false;
   }
     if ($delay === 0) {
+      $this->getLogger()->info("§calling event");
 $this->chatScramble();
     }
   }
@@ -51,8 +55,9 @@ while($delay === 0 && $timer != 0) {
     return false;
   }
 $this->getServer()->broadcastMessage(onChat()->$player ."Unscrambled the word: " . chatScramble()->$wordraw . "and won " . chatScramble()->$economy);
+  $this->getLogger()->info("§0someone called word");
   $this->chatScramble($timer = 0);
-  timer();
+  this->timer();
 }
 }
  public function onChat(PlayerChatEvent $event) {
