@@ -35,6 +35,7 @@ $this->timer();
   }
   }
   public function timer() {
+      $delay = $this->getConfig()->get("Delay");
     while($delay > 0) {
       return false;
   }
@@ -43,6 +44,7 @@ $this->chatScramble();
     }
   }
 public function reaction(Player $player) {
+    $delay = $this->getConfig()->get("Delay");
 while($delay === 0 && $timer != 0) {
   if (Player instanceof player){
   $this->getLogger()->warning("you cant participate you silly");
