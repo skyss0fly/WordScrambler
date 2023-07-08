@@ -63,7 +63,7 @@ $this->getServer()->broadcastMessage(onChat()->$player ."Unscrambled the word: "
  public function onChat(PlayerChatEvent $event) {
         $player = $event->getPlayer();
         $message = $event->getMessage();
-   if ($message === chatScramble()->$word) {     
+   if (str_contains($this->chatScrambler($wordraw )) {  
   $this->reaction();
   $this->economy();
 }
