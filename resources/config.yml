@@ -4,4 +4,4 @@ MoneyRangeLowest: 300
 Delay: 100
 # time till next event
 Timer: 300 
-# 300 seconds  this is the time limit from beginning to end of the scramble event
+# 300 seconds. This is the time limit from beginning to end of the scramble event
