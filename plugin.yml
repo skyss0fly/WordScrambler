@@ -1,5 +1,5 @@
-Name: WordScrambler
-Api: 5.0.0
-Version: 1.0
-Description: "Test"
-Author: skyss0fly
+name: WordScrambler
+version: 1.1.0
+api: 5.0.0
+main: src
+author: skyss0fly
