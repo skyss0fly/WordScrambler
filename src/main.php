@@ -15,7 +15,7 @@ $config = $this->getConfig();
 }
   public function onEnable(): void {
 timer();
-$this->getLogger()->info("Plugin Enabled");
+$this->getLogger()->info("§0Plugin Enabled");
 }
 public function chatScramble(Player $player): void {
 $mhigh =  $this->getConfig()->get("MoneyRangeHighest");
