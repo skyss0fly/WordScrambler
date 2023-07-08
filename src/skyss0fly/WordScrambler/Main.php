@@ -63,10 +63,9 @@ $this->getServer()->broadcastMessage(onChat()->$player ."Unscrambled the word: "
  public function onChat(PlayerChatEvent $event) {
         $player = $event->getPlayer();
         $message = $event->getMessage();
-   if (str_contains($this->chatScrambler($wordraw )) {  
+   if (str_contains($this->chatScrambler($wordraw)){  
   $this->reaction();
   $this->economy();
-}
 }
 public function economy(BedrockEconomy $beconomy) {
 BedrockEconomyAPI::legacy()->addToPlayerBalance(
