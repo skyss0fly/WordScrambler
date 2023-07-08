@@ -1,5 +1,5 @@
 name: WordScrambler
 version: 1.1.0
 api: 5.0.0
-main: src/Main.php
+main: skyss0fly\WordScrambler\Main
 author: skyss0fly
