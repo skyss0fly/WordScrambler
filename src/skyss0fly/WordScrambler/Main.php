@@ -53,7 +53,7 @@ while($delay === 0 && $timer != 0) {
     return false;
   }
 $this->getServer()->broadcastMessage(onChat::$player ."Unscrambled the word: " . chatScramble::$wordraw . "and won " . chatScramble::$economy)
-  chatscramble::timer = 0
+  chatScramble::timer = 0
   timer();
   
 }
