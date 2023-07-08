@@ -52,8 +52,8 @@ while($delay === 0 && $timer != 0) {
   $this->getLogger()->warning("you cant participate you silly");
     return false;
   }
-$this->getServer()->broadcastMessage(onChat::$player ."Unscrambled the word: " . chatScramble::$wordraw . "and won " . chatScramble::$economy)
-  chatScramble::timer = 0
+$this->getServer()->broadcastMessage(onChat()->$player ."Unscrambled the word: " . chatScramble()->$wordraw . "and won " . chatScramble()->$economy)
+  chatScramble()->timer = 0
   timer();
   
 }
@@ -62,7 +62,7 @@ $this->getServer()->broadcastMessage(onChat::$player ."Unscrambled the word: " .
  public function onChat(PlayerChatEvent $event) {
         $player = $event->getPlayer();
         $message = $event->getMessage();
-   if ($message === chatScramble::$word) {
+   if ($message === chatScramble()->$word) {
      
    reaction();
      economy();
@@ -72,8 +72,8 @@ $this->getServer()->broadcastMessage(onChat::$player ."Unscrambled the word: " .
 
 public function economy(BedrockEconomy $beconomy) {
 BedrockEconomyAPI::legacy()->addToPlayerBalance(
-    onChat::$player,
-    chatScramble::$economy,
+    onChat()->$player,
+    chatScramble()->$economy,
     ClosureContext::create(
         function (bool $wasUpdated): void {
             var_dump($wasUpdated);
