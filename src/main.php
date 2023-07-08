@@ -2,6 +2,8 @@
 
 namespace skyss0fly\WordScrambler;
 use pocketmine\plugin\PluginBase;
+use pocketmine\event\Listener;
+use pocketmine\player\Player;
 class main extends PluginBase {
 
 public function onLoad(): void {
@@ -35,4 +37,14 @@ timer();
 chatScramble();
     }
   }
+
+public function reaction(Player $player) {
+while($delay === 0 && $timer != 0) {
+  if (Player instanceof player){
+  $this->getLogger()->warning("you cant participate you silly");
+    return false;
+  }
+  if 
+}
+}
 }
