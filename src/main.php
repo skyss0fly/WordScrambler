@@ -7,7 +7,7 @@ use pocketmine\player\Player;
 use cooldogepm\BedrockEconomy;
 use Closure;
 use ClosureContext;
-class Main extends PluginBase {
+class Main extends PluginBase implements Listener {
 
 public function onLoad(): void {
 $config = $this->getConfig();
