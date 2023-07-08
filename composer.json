@@ -1,6 +1,6 @@
 {
     "require": {
-        "dktapps/pmforms": "dev-master"
+        "cooldogepm/bedrockeconomy": "dev-master"
     },
     "require-dev": {
         "phpstan/phpstan": "1.10.25",
