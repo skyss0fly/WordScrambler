@@ -44,7 +44,19 @@ while($delay === 0 && $timer != 0) {
   $this->getLogger()->warning("you cant participate you silly");
     return false;
   }
-  if 
+$this->getServer()->broadcastMessage(onChat::$player ."Unscrambled the word: " . chatScramble::$wordraw . "and won " . chatScramble::$economy)
+  chatscramble::timer = 0
+  timer();
+  
 }
+}
+
+ public function onChat(PlayerChatEvent $event) {
+        $player = $event->getPlayer();
+        $message = $event->getMessage();
+   if ($message === chatScramble::$word) {
+     
+   reaction();
+
 }
 }
