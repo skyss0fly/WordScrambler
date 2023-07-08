@@ -13,6 +13,10 @@ public function onLoad(): void {
 $config = $this->getConfig();
   $this->saveDefaultConfig();
 }
+  public function onEnable(): void {
+timer();
+$this->getLogger()->info("Plugin Enabled");
+}
 public function chatScramble(Player $player): void {
 $mhigh =  $this->getConfig()->get("MoneyRangeHighest");
   $mlow =  $this->getConfig()->get("MoneyRangeLowest");
