@@ -6,5 +6,7 @@ class main extends PluginBase {
 
 public function onLoad(): void {
 $config = $this->getConfig();
+  $this->saveDefaultConfig();
 }
+  
 }
