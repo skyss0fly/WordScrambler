@@ -5,13 +5,15 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\player\Player;
 use cooldogepm\BedrockEconomy;
-class main extends PluginBase {
+use Closure;
+use ClosureContext;
+class Main extends PluginBase {
 
 public function onLoad(): void {
 $config = $this->getConfig();
   $this->saveDefaultConfig();
 }
-public function chatScramble() {
+public function chatScramble(Player $player): void {
   $timer = $this->getConfig()->get("Timer"); 
   // ^ time till end of scramble
   $wordraw = $this->getConfig()->get("Words");
