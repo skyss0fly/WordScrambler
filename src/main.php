@@ -14,11 +14,13 @@ $config = $this->getConfig();
   $this->saveDefaultConfig();
 }
 public function chatScramble(Player $player): void {
+$mhigh =  $this->getConfig()->get("MoneyRangeHighest");
+  $mlow =  $this->getConfig()->get("MoneyRangeLowest");
   $timer = $this->getConfig()->get("Timer"); 
   // ^ time till end of scramble
   $wordraw = $this->getConfig()->get("Words");
   $word = $wordraw->str_shuffle();
-  $economy =  $this->getConfig()->get("MoneyRange");
+foreach (range ($mlow, $mhigh) as $economy)
   $delay = $this->getConfig()->get("Delay");
   // ^ time till next scramble
   while($timer > 0){
