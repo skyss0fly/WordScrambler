@@ -20,15 +20,14 @@ public function chatScramble() {
   $delay = $this->getConfig()->get("Delay");
   // ^ time till next scramble
   while($timer > 0){
-$this->getServer()->broadcastMessage("New Word to Scramble: " .  $word . "winner gets " . $economy)
-}
+$this->getServer()->broadcastMessage("New Word to Scramble: " .  $word . "winner gets " . $economy);
+  }
   if ($timer === 0) {
 timer();
     
   }
 
   }
-}
   public function timer() {
     while($delay > 0) {
       return false;
